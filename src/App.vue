@@ -36,16 +36,21 @@
     </div>
   </nav>
 
-  <div class="container mt-4">
-    <h5>블로그입니다.</h5>
-    <p>- Vue로 만듦 -</p> 
-  </div>
+  <router-link to="/">홈페이지</router-link>
+  <div></div>
+  <router-link to="/list">리스트페이지</router-link>
 
-  <List :블로그글="블로그글" />
+
+  <div class="mt-4">
+    <router-view :블로그글="블로그글"></router-view>
+  </div>
+  
+
+  <!-- <List :블로그글="블로그글" /> -->
 </template>
 
 <script>
-import List from './components/List.vue';
+// import List from './components/List.vue';
 import blog from './assets/blog.js';
 
 export default {
@@ -56,7 +61,7 @@ export default {
     }
   },
   components: {
-    List : List,
+    // List : List,
   },
   
 }
